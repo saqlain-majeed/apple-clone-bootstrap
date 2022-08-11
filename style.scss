@@ -1,3 +1,5 @@
+// Importing font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 // Global Styling
 *,
 *::before,
@@ -9,7 +11,7 @@
 
 html,
 body {
-  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
   font-size: 10px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -17,14 +19,6 @@ body {
   overflow-x: hidden;
   top: 0;
   left: 0;
-}
-a {
-  text-decoration: none;
-  color: rgba(34, 54, 69, 7);
-  font-weight: 500;
-}
-a:hover {
-  color: #e74c3c;
 }
 .navbar-brand {
   padding-top: 0;
@@ -36,14 +30,100 @@ a:hover {
 }
 .navbar-collapse {
   flex-grow: 0;
+  // padding: 0 13.3rem;
 }
 
-.nav-link {
-  padding: 0;
-  font-size: 1.2rem;
-  color: #ccc;
+a {
+  font-size: 1.2rem !important;
+  color: #ccc !important;
 
   &:hover {
-    color: #fff;
+    color: #fff !important;
   }
 }
+
+.navbar-expand-md .navbar-nav .nav-link {
+  padding: 0;
+}
+
+.container {
+  max-width: 98rem;
+}
+// -----------------------------------
+// ----- SVG ----
+// -----------------------------------
+.svg {
+  fill: red !important;
+}
+
+// -----------------------------------
+// ----- Navbar Icon ----
+// -----------------------------------
+
+.main-content {
+  min-height: 100vh;
+}
+
+.navbar-toggler {
+  width: 15px;
+  height: 40px;
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 1.5px;
+  width: 100%;
+  background: #fff;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0px;
+}
+
+.navbar-toggler .top-bar {
+  margin-top: 0px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0px;
+  transform: rotate(-135deg);
+}
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -7px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 7px;
+  transform: rotate(0deg);
+}
+// --*******************************--
+
+// ----- Unicef ----
+.unicef-wrapper {
+  padding: 2rem 0;
+
+  .unicef-text {
+    color: #2997ff;
+    font-size: 14px;
+  }
+}
+
+// --*******************************--
