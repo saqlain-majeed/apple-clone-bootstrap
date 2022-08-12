@@ -118,12 +118,49 @@ a {
 
 // ----- Unicef ----
 .unicef-wrapper {
+  background: #000;
   padding: 2rem 0;
 
   .unicef-text {
     color: #2997ff;
+    font-weight: 300;
     font-size: 14px;
+    position: relative;
+    //  \2197
+
+    &::after {
+      content: '\2197';
+      position: absolute;
+      padding-left: 0.5rem;
+    }
   }
 }
 
 // --*******************************--
+
+// ----- Media Query ----
+
+@media only screen and (max-width: 734px) {
+  .navbar {
+    padding: 0;
+  }
+  .unicef-wrapper {
+    padding: 1.5rem 0;
+  }
+  .unicef-img-wrapper {
+    flex-direction: column;
+  }
+  .unicef-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      right: -15px;
+      bottom: 0;
+    }
+  }
+}
+
+// width: 94px;
